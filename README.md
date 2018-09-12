@@ -43,7 +43,7 @@ php artisan vendor:publish --tag=laravel-admin-star-rating
 
 在form表单中使用它：
 ```php
-$form->starRating('code');
+$form->starRating('rate');
 ```
 
 
