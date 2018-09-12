@@ -25,6 +25,7 @@ class StarRating extends Field
     public function render()
     {
         $config = json_encode(config('admin.extensions.star-rating.config'));
+        $config = $config ? $config : '';
         Admin::script("$('#{$this->id}').rating({$config});");
         return parent::render();
     }
