@@ -32,7 +32,7 @@ In the `extensions` section of the `config/admin.php` file, add some configurati
          
          // configuration
          'config' => [
-             'min' => 1, 'max' => 5, 'step' => 1, 'size' => 'xs'
+             'min' => 1, 'max' => 5, 'step' => 1, 'size' => 'xs', 'language' => 'zh',
          ]
      ]
  ]
