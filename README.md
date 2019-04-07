@@ -8,14 +8,16 @@ This is a `laravel-admin` extension that integrates [bootstrap-star-rating](http
 
 ## Installation
 
-First, install dependencies:
 ```bash
 composer require jxlwqq/star-rating
+php artisan vendor:publish --tag=laravel-admin-star-rating
 ```
 
-Then, publish the resource directory:
+## Update
+
 ```bash
-php artisan vendor:publish --tag=laravel-admin-star-rating
+composer require jxlwqq/star-rating
+php artisan vendor:publish --tag=laravel-admin-star-rating --force
 ```
 
 ## Configuration
