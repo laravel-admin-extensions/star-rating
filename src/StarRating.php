@@ -22,8 +22,13 @@ class StarRating extends Field
     protected static $js = [
         'vendor/laravel-admin-ext/star-rating/bootstrap-star-rating-4.0.3/js/star-rating.min.js',
     ];
+
     public function render()
     {
+        $config = config('admin.extensions.star-rating.config');
+        if (isset($config['language']) && file_exists(__DIR__ . '/../resources/assets/bootstrap-star-rating-4.0.3/js/locales/' . $config['language'] . '.js')) {
+            Admin::js('vendor/laravel-admin-ext/star-rating/bootstrap-star-rating-4.0.3/js/locales/zh.js');
+        }
         $config = json_encode(config('admin.extensions.star-rating.config'));
         $config = $config ? $config : '';
         Admin::script("$('#{$this->id}').rating({$config});");
