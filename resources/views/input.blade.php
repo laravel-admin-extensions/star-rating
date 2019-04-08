@@ -8,7 +8,7 @@
 
         <div class="input-group">
 
-            <input {!! $attributes !!} class="rating" id="{!! $id !!}" />
+            <input {!! $attributes !!} class="rating" id="{!! $id !!}" name="{{$name}}" value="{{ old($column, $value) }}"/>
 
         </div>
 
